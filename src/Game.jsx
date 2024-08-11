@@ -35,7 +35,6 @@ function GameLayout({
 	startNewGame,
 	isGameEnded,
 	setIsGameEnded,
-	isDraw,
 }) {
 	return (
 		<div className={styles['tic-tac-toe']}>
