@@ -3,6 +3,7 @@ import styles from './Game.module.css';
 import { Field } from './components/Field/Field';
 import { Information } from './components/Information/Information';
 import { CLEAN_PATTERNS } from './constants';
+import PropTypes from 'prop-types';
 
 function Game() {
 	const [currentPlayer, setCurrentPlayer] = useState('X');
@@ -55,3 +56,10 @@ function GameLayout({
 }
 
 export default Game;
+
+GameLayout.propTypes = {
+	fields: PropTypes.array,
+	currentPlayer: PropTypes.string,
+	isGameEnded: PropTypes.bool,
+	startNewGame: PropTypes.func,
+};
